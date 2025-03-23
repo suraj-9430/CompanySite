@@ -1,0 +1,153 @@
+<!-- <div class="background-container row">
+  <div class="background-text row align-items-center w-100">
+    <div class="col-md-4 text-container">
+      <div style="font-weight: 800; text-align: start;">
+        {{ currentItem.title }}
+      </div>
+      <br>
+      <div style="font-size: smaller; text-align: justify; font-style: italic;">
+        {{ currentItem.subtitle }}
+      </div>
+    </div>
+    <div class="col-md-4 text-center">
+      <img class="card-img-top" [src]="currentItem.path" alt="Image">
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div> -->
+<div class="bg-image" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <br><br>
+        <h1 style="font-weight: 800; text-align: start; font-size: x-large;"> {{ currentItem.title }}</h1><br><br>
+        <div style="font-size: medium; text-align: justify; font-style: italic;"> {{ currentItem.subtitle }}</div>
+      </div>
+      <div class="col image-column" style="margin-top: 3%; margin-left: 5%;">
+        <img class="card-img-top" [src]="currentItem.path" alt="Image">
+      </div>
+    </div>
+  </div>
+  <br><br>
+</div>
+
+<div class="content-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <br><br>
+        <div style="font-weight: bold; font-size: x-large;"> Hire Us for Quality Work Delivered On Time, Ensuring
+          Excellence at Every Step!</div><br><br>
+        <div style="text-align: justify; font-style: italic; ">
+          <span style="font-size: large;">Anand Construction Private Limited</span> is committed to delivering
+          exceptional construction works while actively contributing to Honorable Prime Minister Narendra Modi ji's
+          vision. We align with the mission of increasing employment, supporting Skill India, and providing equal
+          opportunities for every worker to grow and prosper. Our goal is to become one of India's leading construction
+          companies within the next 25 years. <br><br>
+          As one of the fastest-growing construction companies in India, Anand Construction Private Limited specializes
+          in a wide range of industrial works in the oil and gas sectors, as well as thermal power plants. Our expertise
+          includes civil, structural, and mechanical projects such as tank pad foundations, mounded storage vessels,
+          boiler foundations, buildings, roads, bridges, culverts, and other types of foundations, along with their
+          associated structural and mechanical works.
+        </div>
+        <br>
+        <div style="font-style: italic;font-weight: bold ;font-size: 1.22rem;">Director's</div>
+      
+      </div>
+
+      <div class="col-md-3 circle-progress-container">
+        <circle-progress [percent]="90" [radius]="110" [outerStrokeWidth]="16" [innerStrokeWidth]="8" [title]="'97'"
+          [outerStrokeColor]="'rgb(51, 116, 140)'" [innerStrokeColor]="'rgb(111, 86, 90)'" [animation]="true"
+          [titleColor]="'black'" [animationDuration]="1000" [subtitle]="'Worker retention'"
+          [subtitleFontWeight]="'bold'" [subtitleFontSize]="'15'" [subtitleColor]="'black'"></circle-progress>
+        <div style="margin-left: 9rem;">
+        <circle-progress [percent]="90" [radius]="105" [outerStrokeWidth]="16" [innerStrokeWidth]="8" [title]="'97'"
+          [outerStrokeColor]="'#903232'" [innerStrokeColor]="'#808b96'" [animation]="true" [titleColor]="'black'"
+          [animationDuration]="1000" [subtitle]="'Worker retention'" [subtitleFontWeight]="'bold'"
+          [subtitleFontSize]="'15'" [subtitleColor]="'black'"></circle-progress>
+        </div>
+      </div>
+      <div class="col-md-2 circle-progress-large" >
+        <circle-progress [percent]="97" [radius]="120" [outerStrokeWidth]="16" [innerStrokeWidth]="8"
+          [titleFontWeight]="'bold'" [titleFontSize]="'40'" [titleColor]="'black'" [title]="'99%'"
+          [outerStrokeColor]="'green'" [innerStrokeColor]="'rgb(205, 149, 77)'" [animation]="true"
+          [subtitleFontWeight]="'bold'" [subtitleFontSize]="'20'" [subtitleColor]="'black'" [animationDuration]="1000"
+          [subtitle]="'Success Projects'"></circle-progress>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br><br>
+<app-slider-image></app-slider-image>
+<app-contactus>
+  
+</app-contactus>
+<app-footer>
+</app-footer>
+
+
+
+<!-- 
+<div class="containt" style="background-color:rgb(225, 203, 174); width: 100.755%;">
+
+  <div class="col-md-5">
+    <div class="h2">Hire Us for Quality Work Delivered On Time, Ensuring Excellence at Every Step!</div><br>
+    <div style="text-align: justify; font-style: italic; font-weight: bold;">
+      <span style="font-size: large;">Anand Construction Private Limited</span> is committed to delivering
+      exceptional construction works while actively contributing to Honorable Prime Minister Narendra Modi ji's
+      vision. We align with the mission of increasing employment, supporting Skill India, and providing equal
+      opportunities for every worker to grow and prosper. Our goal is to become one of India's leading construction
+      companies within the next 25 years.
+      <br><br>
+      As one of the fastest-growing construction companies in India, Anand Construction Private Limited specializes
+      in a wide range of industrial works in the oil and gas sectors, as well as thermal power plants. Our expertise
+      includes civil, structural, and mechanical projects such as tank pad foundations, mounded storage vessels,
+      boiler foundations, buildings, roads, bridges, culverts, and other types of foundations, along with their
+      associated structural and mechanical works.
+    </div>
+  </div>
+  <div class="col-md-3" style="padding-top: 4rem;">
+    <circle-progress
+  [percent]="90"
+  [radius]="100"
+  [outerStrokeWidth]="16"
+  [innerStrokeWidth]="8"
+  [outerStrokeColor]="'green'"
+  [innerStrokeColor]="'rgb(205, 149, 77)'"
+  [animation]="true"
+  [animationDuration]="1000"
+  [subtitle]="'work done'"
+></circle-progress>
+  </div>
+</div>
+<br><br><br> -->
+
+<!-- 
+<div class="container" >
+  
+  <div class="row">
+    <div class="col col-lg-2">
+      3 of 3
+    </div>
+   
+    <div class="col ">
+      <span style="font-size: large;">Anand Construction Private Limited</span> is committed to delivering
+      exceptional construction works while actively contributing to Honorable Prime Minister Narendra Modi ji's
+      vision. We align with the mission of increasing employment, supporting Skill India, and providing equal
+      opportunities for every worker to grow and prosper. Our goal is to become one of India's leading construction
+      companies within the next 25 years.
+      <br><br>
+      As one of the fastest-growing construction companies in India, Anand Construction Private Limited specializes
+      in a wide range of industrial works in the oil and gas sectors, as well as thermal power plants. Our expertise
+      includes civil, structural, and mechanical projects such as tank pad foundations, mounded storage vessels,
+      boiler foundations, buildings, roads, bridges, culverts, and other types of foundations, along with their
+      associated structural and mechanical works.
+    </div>
+    <div class="col-md-auto">
+      Variable width content
+    </div>
+    
+   
+  </div>
+</div> -->

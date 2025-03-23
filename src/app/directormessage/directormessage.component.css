@@ -1,0 +1,48 @@
+    p{
+      text-align: justify;
+    }
+    
+    .directors-message {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      margin-top: 50px;
+    }
+    .directors-message h2 {
+      color: #2c3e50;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .directors-message p {
+      color: #555;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    .directors-message .signature {
+      font-style: italic;
+      color: #2c3e50;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .directors-image img {
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 60%;
+      
+      margin-left: 5rem;
+      height: auto;
+      margin-bottom: 20px;
+      margin-top: 2rem;
+    }
+    .directors-image h5 {
+      text-align: center;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+    @media (max-width: 768px) {
+      .directors-image {
+        text-align: center;
+      }
+    }

@@ -1,0 +1,32 @@
+
+    .about-us-section {
+      background:white;
+      border-radius: 3rem;
+      box-shadow: 0 4px 8px rgba(195, 13, 13, 0.1);
+      padding: 30px;
+      margin-top: 50px;
+    }
+    .about-us-section h2 {
+      color: #375069;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .about-us-section p {
+      color: #555;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    .about-us-section ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .about-us-section ul li {
+      margin-bottom: 10px;
+    }
+    .about-us-section ul li strong {
+      color: #2c3e50;
+    }
+    .cta-button {
+      margin-top: 20px;
+    }
+

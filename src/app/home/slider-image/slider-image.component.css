@@ -1,0 +1,12 @@
+
+
+.client-img {
+    width: 18rem; /* Set your desired image width */
+    height: 18rem; /* Maintain aspect ratio */
+    padding: 3rem;
+    border-radius: 25%;
+}
+ img:hover{
+    width: 20rem;
+    height:20rem;
+ }

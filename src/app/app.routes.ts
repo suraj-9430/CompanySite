@@ -3,7 +3,7 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 export const routes: Routes = [
-    {path:"",redirectTo:"/Home",pathMatch:"full"},
+   { path: "", redirectTo: "Home", pathMatch: "full" },
     {path:"Home",loadComponent:()=>import('./home/home.component').then(m=>m.HomeComponent),title:"Home"},
     {path:"project",loadComponent:()=>import('./projects/projects.component').then(m=>m.ProjectsComponent),title:"Projects"},
     {path:"imagegallary",loadComponent:()=>import('./image-gallary/image-gallary.component').then(m=>m.ImageGallaryComponent),title:"Gallary"},

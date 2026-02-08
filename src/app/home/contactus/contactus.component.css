@@ -1,3 +1,213 @@
-.txtcl{
-    color: red;
+/* ============================================
+   MODERN CONTACT SECTION STYLES
+   ============================================ */
+
+:host {
+  display: block;
+}
+
+.contact-section {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  padding: 5rem 0;
+}
+
+.contact-section .section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact-section .section-label {
+  display: inline-block;
+  color: #ed8936;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.75rem;
+}
+
+.contact-section .section-title h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.25rem;
+  color: #1a365d;
+  margin-bottom: 0.75rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1rem;
+}
+
+.contact-section .section-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);
+  border-radius: 2px;
+}
+
+.contact-section .section-title p {
+  color: #64748b;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+/* Contact Cards */
+.contact-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+  transition: all 0.4s ease;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.contact-card:hover::before {
+  transform: scaleX(1);
+}
+
+.contact-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, rgba(237, 137, 54, 0.1) 0%, rgba(237, 137, 54, 0.2) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  transition: all 0.4s ease;
+}
+
+.contact-card:hover .contact-icon {
+  background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);
+  transform: scale(1.1);
+}
+
+.contact-icon i {
+  font-size: 1.75rem;
+  color: #ed8936;
+  transition: color 0.4s ease;
+}
+
+.contact-card:hover .contact-icon i {
+  color: #ffffff;
+}
+
+.contact-card h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1a365d;
+  margin-bottom: 0.75rem;
+}
+
+.contact-card p {
+  color: #4a5568;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+.contact-card p a {
+  color: #4a5568;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-card p a:hover {
+  color: #ed8936;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  color: #ed8936;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #dd6b20;
+}
+
+.contact-note {
+  display: inline-flex;
+  align-items: center;
+  color: #64748b;
+  font-size: 0.8rem;
+  background: #f1f5f9;
+  padding: 0.4rem 0.75rem;
+  border-radius: 50px;
+}
+
+/* Map Container */
+.map-container {
+  margin-top: 3rem;
+}
+
+.map-wrapper {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border: 4px solid #ffffff;
+}
+
+.map-wrapper iframe {
+  display: block;
+  filter: grayscale(20%) contrast(1.1);
+  transition: filter 0.4s ease;
+}
+
+.map-wrapper:hover iframe {
+  filter: grayscale(0%) contrast(1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 3rem 0;
+  }
+  
+  .contact-card {
+    padding: 1.5rem;
+  }
+  
+  .contact-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .contact-icon i {
+    font-size: 1.5rem;
+  }
+  
+  .map-wrapper iframe {
+    height: 300px;
+  }
 }

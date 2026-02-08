@@ -1,25 +1,118 @@
-<div class="gallery-container">
-    @for ( image of paginatedImages; track $index) {
-        <div class="card" style="width: 18rem;">
-            <img [src]="image" alt="Gallery Image" class="gallery-image card-img-top" width="300px" height="auto">
-            <div class="card-body">
+<!-- Page Header -->
+<section class="page-header">
+  <div class="page-header-overlay"></div>
+  <div class="container">
+    <div class="page-header-content">
+      <h1>Photo Gallery</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a routerLink="/Home">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Gallery</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="gallery-section section">
+  <div class="container">
+    <div class="section-title text-center">
+      <span class="section-label">Our Work</span>
+      <h2>Project Gallery</h2>
+      <p>Explore our portfolio of successful projects and achievements</p>
+    </div>
+    
+    <!-- Filter Tabs -->
+    <div class="gallery-filters">
+      <button 
+        class="filter-btn" 
+        [class.active]="activeFilter === 'all'"
+        (click)="filterImages('all')">
+        All Projects
+      </button>
+      <button 
+        class="filter-btn"
+        [class.active]="activeFilter === 'oil'"
+        (click)="filterImages('oil')">
+        Oil & Gas
+      </button>
+      <button 
+        class="filter-btn"
+        [class.active]="activeFilter === 'industrial'"
+        (click)="filterImages('industrial')">
+        Industrial
+      </button>
+      <button 
+        class="filter-btn"
+        [class.active]="activeFilter === 'infrastructure'"
+        (click)="filterImages('infrastructure')">
+        Infrastructure
+      </button>
+    </div>
+    
+    <!-- Gallery Grid -->
+    <div class="gallery-grid">
+      @for (image of paginatedImages; track $index) {
+        <div class="gallery-item" (click)="openLightbox(image)">
+          <div class="gallery-image">
+            <img [src]="image.src" [alt]="image.title">
+            <div class="gallery-overlay">
+              <div class="overlay-content">
+                <i class="bi bi-zoom-in"></i>
+                <h5>{{ image.title }}</h5>
+                <span>{{ image.category }}</span>
+              </div>
             </div>
           </div>
-    }
-  </div>
-  <!-- Pagination Controls -->
-  <div class="pagination">
-    <button (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
-    @for (page of getPageNumbers(); track $index) {
-        <span >
-            <button
-              (click)="goToPage(page)"
-              [class.active]="page === currentPage"
-            >
-              {{ page }}
-            </button>
-          </span>
-    }
+        </div>
+      }
+    </div>
     
-    <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+    <!-- Pagination -->
+    <div class="pagination">
+      <button 
+        class="page-btn prev"
+        (click)="previousPage()" 
+        [disabled]="currentPage === 1">
+        <i class="bi bi-chevron-left"></i>
+        Previous
+      </button>
+      
+      <div class="page-numbers">
+        @for (page of getPageNumbers(); track page) {
+          <button
+            class="page-num"
+            [class.active]="page === currentPage"
+            (click)="goToPage(page)">
+            {{ page }}
+          </button>
+        }
+      </div>
+      
+      <button 
+        class="page-btn next"
+        (click)="nextPage()" 
+        [disabled]="currentPage === totalPages">
+        Next
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
   </div>
+</section>
+
+<!-- Lightbox Modal -->
+@if (lightboxOpen && selectedImage) {
+  <div class="lightbox" (click)="closeLightbox()">
+    <div class="lightbox-content" (click)="$event.stopPropagation()">
+      <button class="lightbox-close" (click)="closeLightbox()">
+        <i class="bi bi-x-lg"></i>
+      </button>
+      <img [src]="selectedImage.src" [alt]="selectedImage.title">
+      <div class="lightbox-info">
+        <h4>{{ selectedImage.title }}</h4>
+        <span>{{ selectedImage.category }}</span>
+      </div>
+    </div>
+  </div>
+}

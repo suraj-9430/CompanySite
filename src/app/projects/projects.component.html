@@ -1,42 +1,106 @@
-<div style=" background: linear-gradient(to right, rgba(206, 192, 141, 0.423) 50%, rgb(2, 46, 46));">
-<div class="container-fluid">
-    <div class="card-container">
-      <div class="card" >
-        <img class="card-img-top" src="bpcl.png" alt="Card image cap">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<!-- Page Header -->
+<section class="page-header">
+  <div class="page-header-overlay"></div>
+  <div class="container">
+    <div class="page-header-content">
+      <h1>Our Projects</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a routerLink="/Home">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Projects</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Intro -->
+<section class="projects-intro section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <span class="section-label">Our Portfolio</span>
+        <h2 class="section-heading">Delivering Excellence Across Industries</h2>
+        <p class="intro-text">
+          With over 25 years of experience, we have successfully completed 150+ projects 
+          for India's leading petroleum corporations and industrial clients.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Grid -->
+<section class="projects-section section section-light">
+  <div class="container">
+    <div class="row g-4">
+      @for (project of projects; track project.id) {
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="project-image">
+              <img [src]="project.image" [alt]="project.title">
+              <div class="project-overlay">
+                <span class="project-category">{{ project.category }}</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h4>{{ project.title }}</h4>
+              <p>{{ project.description }}</p>
+              <div class="project-meta">
+                <span><i class="bi bi-geo-alt"></i>{{ project.location }}</span>
+                <span><i class="bi bi-building"></i>{{ project.client }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Project Stats -->
+<section class="project-stats section">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-6 col-md-3">
+        <div class="stat-item">
+          <span class="stat-number">150+</span>
+          <span class="stat-label">Completed Projects</span>
         </div>
       </div>
-      <div class="card">
-        <img class="card-img-top" src="bpcl.png" alt="Card image cap">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <div class="col-6 col-md-3">
+        <div class="stat-item">
+          <span class="stat-number">25+</span>
+          <span class="stat-label">Years Experience</span>
         </div>
       </div>
-      <div class="card">
-        <img class="card-img-top" src="bpcl.png" alt="Card image cap">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <div class="col-6 col-md-3">
+        <div class="stat-item">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Happy Clients</span>
         </div>
       </div>
-      <div class="card">
-        <img class="card-img-top" src="bpcl.png" alt="Card image cap">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="bpcl.png" alt="Card image cap">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div><div class="card">
-        <img class="card-img-top" src="bpcl.png" alt="Card image cap">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <div class="col-6 col-md-3">
+        <div class="stat-item">
+          <span class="stat-number">99%</span>
+          <span class="stat-label">Success Rate</span>
         </div>
       </div>
     </div>
   </div>
-</div>
-  
+</section>
+
+<!-- CTA Section -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-content">
+      <div class="cta-text">
+        <h3>Have a Project in Mind?</h3>
+        <p>Let's discuss how we can bring your vision to reality.</p>
+      </div>
+      <a routerLink="/contact" class="btn-modern btn-primary">
+        <i class="bi bi-envelope me-2"></i>Get in Touch
+      </a>
+    </div>
+  </div>
+</section>

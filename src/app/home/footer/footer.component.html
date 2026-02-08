@@ -1,194 +1,114 @@
-<!-- Footer -->
-<footer class="bg-dark text-center text-white">
-    <!-- Grid container -->
-    <div class="container p-4">
-      <!-- Section: Social media -->
-      <!-- <section class="mb-4">
-       
-        <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-facebook-f"></i
-        ></a>
-  
-       
-        <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-twitter"></i
-        ></a>
-  
-  
-        <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-google"></i
-        ></a>
-  
-       
-        <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-instagram"></i
-        ></a>
-  
-     
-        <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-linkedin-in"></i
-        ></a>
-  
-      
-        <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-github"></i
-        ></a>
-      </section> -->
-     
-  
-      <!-- Section: Form -->
-      <section class="">
-        <form [formGroup]="subform">
-          <!--Grid row-->
-          <div class="row d-flex justify-content-center">
-            <!--Grid column-->
-            <div class="col-auto">
-              <p class="pt-2">
-                <strong>Sign up for our newsletter</strong>
-              </p>
-            </div>
-            <!--Grid column-->
-  
-            <!--Grid column-->
-            <div class="col-md-5 col-12">
-              <!-- Email input -->
-              <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">&#64;</span>
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="Email"
-                  aria-label="Email"
-                  aria-describedby="basic-addon1"
-                  formControlName="email"
-                />
-              </div>
-            </div>
-            
-            <!-- Submit button -->
-            <div class="col-auto">
-              <button
-                mdbRipple
-                type="submit"
+<!-- Modern Footer -->
+<footer class="modern-footer">
+  <!-- Main Footer Content -->
+  <div class="footer-main">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Company Info -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand">
+            <img src="image.jpeg" alt="Anand Construction" class="footer-logo">
+            <h4>Anand Construction</h4>
+          </div>
+          <p class="footer-description">
+            Building excellence since 2000. We specialize in industrial, civil, and structural 
+            construction projects across India's oil & gas and power sectors.
+          </p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6">
+          <h5 class="footer-title">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a routerLink="/Home"><i class="bi bi-chevron-right"></i>Home</a></li>
+            <li><a routerLink="/aboutus"><i class="bi bi-chevron-right"></i>About Us</a></li>
+            <li><a routerLink="/project"><i class="bi bi-chevron-right"></i>Projects</a></li>
+            <li><a routerLink="/imagegallary"><i class="bi bi-chevron-right"></i>Gallery</a></li>
+            <li><a routerLink="/contact"><i class="bi bi-chevron-right"></i>Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Services -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Our Services</h5>
+          <ul class="footer-links">
+            <li><a href="#"><i class="bi bi-chevron-right"></i>Civil Construction</a></li>
+            <li><a href="#"><i class="bi bi-chevron-right"></i>Structural Works</a></li>
+            <li><a href="#"><i class="bi bi-chevron-right"></i>Oil & Gas Projects</a></li>
+            <li><a href="#"><i class="bi bi-chevron-right"></i>Power Plants</a></li>
+            <li><a href="#"><i class="bi bi-chevron-right"></i>Industrial Foundations</a></li>
+          </ul>
+        </div>
+        
+        <!-- Newsletter -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Stay Updated</h5>
+          <p class="newsletter-text">Subscribe to our newsletter for the latest updates and news.</p>
+          <form [formGroup]="subform" class="newsletter-form">
+            <div class="input-group">
+              <input 
+                type="email" 
+                class="form-control" 
+                placeholder="Enter your email"
+                formControlName="email"
+                aria-label="Email address">
+              <button 
+                type="submit" 
+                class="btn-subscribe"
                 (click)="sub()"
-                [disabled]="subform.invalid"
-                class="btn btn-outline-light mb-4"
-              >
-                Subscribe
+                [disabled]="subform.invalid">
+                <i class="bi bi-send-fill"></i>
               </button>
             </div>
-            <!--Grid column-->
+          </form>
+          
+          <!-- Contact Info in Footer -->
+          <div class="footer-contact">
+            <div class="footer-contact-item">
+              <i class="bi bi-telephone-fill"></i>
+              <span>+91 9835003644</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="bi bi-envelope-fill"></i>
+              <span>info&#64;anandconstruction.com</span>
+            </div>
           </div>
-          <!--Grid row-->
-        </form>
-      </section>
-      <!-- Section: Form -->
-  
-      <!-- Section: Text -->
-      <!-- <section class="mb-4">
-       <h4 style="text-align: center;color: rgba(212, 255, 0, 0.673);">QUICK ACCESS</h4>
-      </section> -->
-      <!-- Section: Text -->
-  
-      <!-- Section: Links -->
-      <section class="">
-        <!--Grid row-->
-        <div class="row">
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <!-- <h5 class="text-uppercase">Links</h5> -->
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <!-- <a href="#!" class="text-white">Link 1</a> -->
-              </li>
-              <li>
-                <!-- <a href="#!" class="text-white">Link 2</a> -->
-              </li>
-              <li>
-                <!-- <a href="#!" class="text-white">Link 3</a> -->
-              </li>
-              <li>
-                <!-- <a href="#!" class="text-white">Link 4</a> -->
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-  
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <!-- <h5 class="text-uppercase">Links</h5> -->
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <!-- <a href="#!" class="text-white">Link 1</a> -->
-              </li>
-              <li>
-                <!-- <a href="#!" class="text-white">Link 2</a> -->
-              </li>
-              <li>
-                <!-- <a href="#!" class="text-white">Link 3</a> -->
-              </li>
-              <li>
-                <!-- <a href="#!" class="text-white">Link 4</a> -->
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-  
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <!-- <h5 class="text-uppercase">Links</h5> -->
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <!-- <a href="#!" class="text-white">Link 1</a> -->
-              </li>
-              <li>
-                <!-- <a href="#!" class="text-white">Link 2</a> -->
-              </li>
-              <li>
-                <!-- <a href="#!" class="text-white">Link 3</a> -->
-              </li>
-              <li>
-                <!-- <a href="#!" class="text-white">Link 4</a> -->
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-  
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <!-- <h5 class="text-uppercase">Links</h5> -->
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <!-- <a href="#!" class="text-white">Link 1</a> -->
-              </li>
-              <li>
-                <!-- <a href="#!" class="text-white">Link 2</a> -->
-              </li>
-              <li>
-                <!-- <a href="#!" class="text-white">Link 3</a> -->
-              </li>
-              <li>
-                <!-- <a href="#!" class="text-white">Link 4</a> -->
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
         </div>
-        <!--Grid row-->
-      </section>
-      <!-- Section: Links -->
+      </div>
     </div>
-    <!-- Grid container -->
+  </div>
   
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2025 Copyright:
-      <a class="text-white" style="text-decoration: none;" href="">Anand Construction</a>
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="copyright">
+            &copy; {{ currentYear }} <strong>Anand Construction Pvt. Ltd.</strong> All Rights Reserved.
+          </p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <span class="divider">|</span>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- Copyright -->
-  </footer>
-  <!-- Footer -->
+  </div>
+</footer>

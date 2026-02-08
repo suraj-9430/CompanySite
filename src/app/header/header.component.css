@@ -1,100 +1,214 @@
-.bg-navy {
-    background: linear-gradient(to right, rgba(206, 192, 141, 0.423) 50%, rgb(2, 46, 46));
-   
-    height: 90px;
+/* ============================================
+   MODERN HEADER STYLES
+   ============================================ */
+
+:host {
+  display: block;
 }
 
-.trn:hover {
-    background-color: hsl(37, 83%, 47%);
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1050;
+  background: rgba(26, 54, 93, 0.95);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
 }
 
-.trn {
-    font-weight: bold;
-    font-size: large;
-    padding: 5px;
-    margin-left: 20px;
+.header.scrolled {
+  background: rgba(26, 54, 93, 0.98);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 }
 
-.dropdown-divider {
-    border-top: 1px dotted #fefefe;
-    border-bottom: none;
-    color: white;
+/* Navbar */
+.header .navbar {
+  padding: 0.75rem 0;
+  transition: all 0.4s ease;
 }
 
-.dropdown-menu {
-    background: #272626;
+.header.scrolled .navbar {
+  padding: 0.5rem 0;
 }
 
-.navbar-brand {
-    width: 250px;
-    transition: transform 0.5s ease, opacity 0.5s ease;
+/* Logo */
+.header .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none !important;
+  padding: 0;
 }
 
-.navbar-brand:hover {
-    transform: scale(1.1) rotate(10deg);
-    opacity: 0.9;
+.header .navbar-brand:hover {
+  transform: scale(1.02);
 }
 
-/* Keyframe for logo bounce */
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
+.header .logo-img {
+  height: 55px;
+  width: auto;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 
-.navbar-brand {
-    animation: bounce 2s infinite;
+.header.scrolled .logo-img {
+  height: 45px;
 }
 
-/* Mobile Adjustments */
-@media (max-width: 992px) {
-    .navbar-toggler {
-        border: none;
-    }
-
-    .navbar-collapse {
-        padding-left: 0;  /* Remove extra padding on smaller screens */
-    }
-
-    .navbar-nav {
-        text-align: center;  /* Center nav links for small screens */
-    }
-
-    .nav-item {
-        margin-left: 0;  /* Remove left margin for nav items */
-    }
-
-    .nav-link {
-        font-size: 1.2rem;  /* Slightly larger text for readability on mobile */
-    }
-
-    .navbar-brand {
-        width: 200px;  /* Reduce logo size */
-    }
-
-    .navbar-nav {
-        padding-top: 10px;
-    }
+/* Nav Links */
+.header .navbar-nav {
+  gap: 0.25rem;
+  align-items: center;
 }
 
-/* Very Small Screens */
-@media (max-width: 576px) {
-    .navbar-brand {
-        width: 150px;  /* Further reduce logo size on extra small screens */
-    }
+.header .nav-link {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  padding: 0.5rem 0.9rem !important;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
 
-    .nav-link {
-        font-size: 1rem;  /* Reduce font size further for readability */
-    }
+.header .nav-link i {
+  font-size: 0.9rem;
+  margin-right: 0.35rem;
+}
 
-    .trn {
-        font-size: 1rem;  /* Adjust menu item font size for small screens */
-    }
+.header .nav-link:hover {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.12);
+}
 
-    .dropdown-menu {
-        font-size: 1rem;  /* Adjust font size for dropdown items */
-    }
+.header .nav-link.active {
+  color: #ffffff !important;
+  background: rgba(237, 137, 54, 0.25);
+}
+
+/* Contact Button */
+.header .btn-contact {
+  background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%) !important;
+  color: #ffffff !important;
+  border-radius: 50px !important;
+  padding: 0.5rem 1.25rem !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 15px rgba(237, 137, 54, 0.35);
+  border: none !important;
+  margin-left: 0.5rem;
+}
+
+.header .btn-contact:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(237, 137, 54, 0.5);
+  background: linear-gradient(135deg, #f6ad55 0%, #ed8936 100%) !important;
+}
+
+/* Dropdown Menu */
+.header .dropdown-menu {
+  background: rgba(26, 54, 93, 0.98) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
+  padding: 0.5rem !important;
+  margin-top: 0.5rem !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+  min-width: 200px;
+}
+
+.header .dropdown-item {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  padding: 0.6rem 1rem !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.header .dropdown-item i {
+  color: #ed8936;
+  margin-right: 0.5rem;
+}
+
+.header .dropdown-item:hover,
+.header .dropdown-item:focus {
+  background: rgba(237, 137, 54, 0.2) !important;
+  color: #ffffff !important;
+  transform: translateX(5px);
+}
+
+.header .dropdown-item.active {
+  background: rgba(237, 137, 54, 0.3) !important;
+  color: #ffffff !important;
+}
+
+/* Mobile Toggle */
+.header .navbar-toggler {
+  border: none !important;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px;
+}
+
+.header .navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+.header .toggler-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 24px;
+}
+
+.header .toggler-icon span {
+  display: block;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 2px;
+}
+
+/* Mobile Menu */
+@media (max-width: 991px) {
+  .header .navbar-collapse {
+    background: rgba(26, 54, 93, 0.98);
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .header .navbar-nav {
+    gap: 0.25rem;
+    align-items: stretch;
+  }
+  
+  .header .nav-link {
+    padding: 0.75rem 1rem !important;
+    justify-content: flex-start;
+  }
+  
+  .header .dropdown-menu {
+    background: rgba(0, 0, 0, 0.2) !important;
+    border: none !important;
+    padding: 0.5rem !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+  }
+  
+  .header .btn-contact {
+    margin-top: 0.5rem;
+    margin-left: 0;
+    text-align: center;
+    justify-content: center;
+  }
 }

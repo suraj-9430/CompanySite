@@ -1,12 +1,186 @@
+/* ============================================
+   MODERN CLIENTS SECTION STYLES
+   ============================================ */
 
-
-.client-img {
-    width: 18rem; /* Set your desired image width */
-    height: 18rem; /* Maintain aspect ratio */
-    padding: 3rem;
-    border-radius: 25%;
+:host {
+  display: block;
 }
- img:hover{
-    width: 20rem;
-    height:20rem;
- }
+
+.clients-section {
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  padding: 5rem 0;
+  position: relative;
+}
+
+.clients-section .section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.clients-section .section-label {
+  display: inline-block;
+  color: #ed8936;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.75rem;
+}
+
+.clients-section .section-title h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.25rem;
+  color: #1a365d;
+  margin-bottom: 0.75rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1rem;
+}
+
+.clients-section .section-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);
+  border-radius: 2px;
+}
+
+.clients-section .section-title p {
+  color: #64748b;
+  font-size: 1rem;
+  margin-top: 1rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Clients Grid */
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.client-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  text-decoration: none !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.client-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-color: rgba(237, 137, 54, 0.3);
+}
+
+.client-logo-wrapper {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+  border-radius: 50%;
+  padding: 0.75rem;
+  transition: all 0.4s ease;
+}
+
+.client-card:hover .client-logo-wrapper {
+  background: linear-gradient(135deg, rgba(237, 137, 54, 0.1) 0%, rgba(237, 137, 54, 0.05) 100%);
+  transform: scale(1.05);
+}
+
+.client-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(20%);
+  transition: filter 0.4s ease;
+}
+
+.client-card:hover .client-logo {
+  filter: grayscale(0%);
+}
+
+.client-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1a365d;
+  transition: color 0.3s ease;
+}
+
+.client-card:hover .client-name {
+  color: #ed8936;
+}
+
+/* Clients Footer */
+.clients-footer {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.clients-footer p {
+  color: #64748b;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .clients-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .clients-section {
+    padding: 3rem 0;
+  }
+  
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .client-card {
+    padding: 1.25rem;
+  }
+  
+  .client-logo-wrapper {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clients-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .client-logo-wrapper {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .client-name {
+    font-size: 0.8rem;
+  }
+}

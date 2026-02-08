@@ -1,24 +1,31 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
-  imports: [ReactiveFormsModule,FormsModule,CommonModule],
+  standalone: true,
+  imports: [ReactiveFormsModule, CommonModule, RouterLink],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })
-export class FooterComponent  implements OnInit{
-  constructor(private formbuilder:FormBuilder){}
-  subform!:FormGroup
+export class FooterComponent implements OnInit {
+  subform!: FormGroup;
+  currentYear = new Date().getFullYear();
+
+  constructor(private formBuilder: FormBuilder) {}
+
   ngOnInit(): void {
-    this.subform=this.formbuilder.group({
-      email:['',[Validators.required,Validators.email]],
+    this.subform = this.formBuilder.group({
+      email: ['', [Validators.required, Validators.email]]
     });
   }
-  
-  sub(){
-    alert("Thank you for subscribe")
-  }
 
+  sub(): void {
+    if (this.subform.valid) {
+      alert('Thank you for subscribing to our newsletter!');
+      this.subform.reset();
+    }
+  }
 }

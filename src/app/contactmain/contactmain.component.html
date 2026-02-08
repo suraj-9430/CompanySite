@@ -1,68 +1,185 @@
+<!-- Page Header -->
+<section class="page-header">
+  <div class="page-header-overlay"></div>
+  <div class="container">
+    <div class="page-header-content">
+      <h1>Contact Us</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a routerLink="/Home">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Contact</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+</section>
 
-
-
-  <!-- Contact Section -->
-  <section class="contact-section">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <p>
-        Have questions or need assistance? Reach out to us! Our team is here to help you with all your construction needs.
-      </p>
-      <div class="row">
-        <!-- Contact Information -->
-        <div class="col-lg-4">
-          <div class="contact-info">
-            <h3><i class="fas fa-map-marker-alt icon"></i>Our Office</h3>
-            <p>
-              123 Construction Lane,<br>
-              City, State, ZIP Code,<br>
-              Country
-            </p>
-          </div>
-          <div class="contact-info">
-            <h3><i class="fas fa-phone-alt icon"></i>Call Us</h3>
-            <p>
-              +91 98-3500-3644<br>
-              +91 98-7654-3210
-            </p>
-          </div>
-          <div class="contact-info">
-            <h3><i class="fas fa-envelope icon"></i>Email Us</h3>
-            <p>
-              info"&#64;"anandconstruction.com<br>
-              support"&#64;"anandconstruction.com
-            </p>
-          </div>
-        </div>
-        <!-- Contact Form -->
-        <div class="col-lg-8">
-          <div class="contact-form">
-            <form>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name" required>
+<!-- Contact Section -->
+<section class="contact-main section">
+  <div class="container">
+    <div class="row g-5">
+      <!-- Contact Information -->
+      <div class="col-lg-5">
+        <div class="contact-info-wrapper">
+          <span class="section-label">Get In Touch</span>
+          <h2 class="section-heading">Let's Start a Conversation</h2>
+          <p class="intro-text">
+            Have questions or need assistance? Reach out to us! Our team is here to help 
+            you with all your construction needs.
+          </p>
+          
+          <div class="contact-info-cards">
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="bi bi-geo-alt-fill"></i>
               </div>
-              <div class="form-group">
-                <input type="email" class="form-control" placeholder="Your Email" required>
+              <div class="info-content">
+                <h4>Our Office</h4>
+                <p>
+                  Plot No.101, Road No. 02,<br>
+                  Kakatiya Hills, Madhapur,<br>
+                  Telangana, Hyderabad - 500033
+                </p>
               </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject" required>
+            </div>
+            
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="bi bi-telephone-fill"></i>
               </div>
-              <div class="form-group">
-                <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+              <div class="info-content">
+                <h4>Call Us</h4>
+                <p>
+                  <a href="tel:+919835003644">+91 9835003644</a><br>
+                  <a href="tel:+918229042309">+91 8229042309</a>
+                </p>
               </div>
-              <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
+            </div>
+            
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="bi bi-envelope-fill"></i>
+              </div>
+              <div class="info-content">
+                <h4>Email Us</h4>
+                <p>
+                  <a href="mailto:info@anandconstruction.com">info&#64;anandconstruction.com</a><br>
+                  <a href="mailto:projects@anandconstruction.com">projects&#64;anandconstruction.com</a>
+                </p>
+              </div>
+            </div>
+            
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="bi bi-clock-fill"></i>
+              </div>
+              <div class="info-content">
+                <h4>Working Hours</h4>
+                <p>
+                  Monday - Saturday: 9:00 AM - 6:00 PM<br>
+                  Sunday: Closed
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <!-- Google Map -->
-      <div class="map-container">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.965641344156!2d85.114775!3d25.6136654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed5824e2e6af6f%3A0x9b787218b5a1b346!2sS.K.Puri%20Park!5e0!3m2!1sen!2sus!4v169876543210!5m2!1sen!2sus"
-          allowfullscreen
-          loading="lazy">
-        </iframe>
+      
+      <!-- Contact Form -->
+      <div class="col-lg-7">
+        <div class="contact-form-wrapper">
+          <h3>Send Us a Message</h3>
+          <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+          
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="name">Your Name *</label>
+                  <input 
+                    type="text" 
+                    id="name"
+                    class="form-control" 
+                    placeholder="John Doe"
+                    formControlName="name">
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input 
+                    type="email" 
+                    id="email"
+                    class="form-control" 
+                    placeholder="john@example.com"
+                    formControlName="email">
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input 
+                    type="tel" 
+                    id="phone"
+                    class="form-control" 
+                    placeholder="+91 9876543210"
+                    formControlName="phone">
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="subject">Subject *</label>
+                  <input 
+                    type="text" 
+                    id="subject"
+                    class="form-control" 
+                    placeholder="How can we help?"
+                    formControlName="subject">
+                </div>
+              </div>
+              
+              <div class="col-12">
+                <div class="form-group">
+                  <label for="message">Your Message *</label>
+                  <textarea 
+                    id="message"
+                    class="form-control" 
+                    rows="5" 
+                    placeholder="Tell us about your project..."
+                    formControlName="message"></textarea>
+                </div>
+              </div>
+              
+              <div class="col-12">
+                <button 
+                  type="submit" 
+                  class="btn-submit"
+                  [disabled]="contactForm.invalid">
+                  <i class="bi bi-send-fill me-2"></i>Send Message
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
+<!-- Map Section -->
+<section class="map-section">
+  <div class="map-wrapper">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.3066534096!2d78.38722117516848!3d17.449095583452476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93dc8c5d69df%3A0x19688beb557fa0ee!2sMadhapur%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1699000000000!5m2!1sen!2sin" 
+      width="100%" 
+      height="450" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>

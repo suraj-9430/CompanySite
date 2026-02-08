@@ -13,7 +13,7 @@ interface GalleryImage {
   standalone: true,
   imports: [CommonModule, RouterLink],
   templateUrl: './image-gallary.component.html',
-  styleUrl: './image-gallary.component.css'
+  styleUrls: ['./image-gallary.component.css']
 })
 export class ImageGallaryComponent {
   allImages: GalleryImage[] = [

@@ -5,11 +5,7 @@
 /* Hero Section */
 .hero-section {
   min-height: 100vh;
-  background: linear-gradient(135deg, rgba(13, 27, 42, 0.92) 0%, rgba(26, 54, 93, 0.88) 100%),
-              url('/petrolium.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: linear-gradient(135deg, #0d1b2a 0%, #1a365d 50%, #2c5282 100%);
   position: relative;
   overflow: hidden;
 }
@@ -546,11 +542,7 @@
 
 /* CTA Section */
 .cta-section {
-  background: linear-gradient(135deg, rgba(26, 54, 93, 0.95) 0%, rgba(13, 27, 42, 0.95) 100%),
-              url('/petrolium.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: linear-gradient(135deg, #1a365d 0%, #0d1b2a 100%);
   padding: 5rem 0;
   position: relative;
 }
